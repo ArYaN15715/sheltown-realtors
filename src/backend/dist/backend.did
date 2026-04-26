@@ -1,0 +1,12 @@
+type Contact = 
+ record {
+   id: nat;
+   name: text;
+   phone: text;
+   requirement: text;
+   timestamp: int;
+ };
+service : {
+  addContact: (name: text, phone: text, requirement: text) -> (bool);
+  getContacts: () -> (vec Contact) query;
+}
